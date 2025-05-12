@@ -16,6 +16,7 @@ public class Gui extends JFrame {
 
     Random rand = new Random();
 
+
     // Array password
     char passArray[] = {
             'a', 'b', 'c', 'd', 'e', 'f', 'g','h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q','r', 's', 't', 'u', 'v', 'w', 'z', '-', '?'
@@ -40,17 +41,18 @@ public class Gui extends JFrame {
 
         // Choose password length
         choosePassLength = new JScrollBar(Adjustable.HORIZONTAL);
-        choosePassLength.setValue(1);
-        choosePassLength.setMinimum(1);
+        choosePassLength.setValue(2);
+        choosePassLength.setMinimum(2);
         choosePassLength.setMaximum(110);
         choosePassLength.addAdjustmentListener(new AdjustmentListener() {
             @Override
             public void adjustmentValueChanged(AdjustmentEvent e) {
-                sbValueLbl.setText("Number of characters: " + (choosePassLength.getValue() + 1));
+                sbValueLbl.setText("Number of characters: " + (choosePassLength.getValue()));
                 sbValue = choosePassLength.getValue();
             }
         });
         add(choosePassLength);
+        sbValue = choosePassLength.getValue();
 
         // Value of scrollbar label
         sbValueLbl = new JLabel("Number of characters: " + sbValue);
