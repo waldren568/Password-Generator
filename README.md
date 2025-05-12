@@ -1,2 +1,2 @@
-# Password-Generator
+# Password Generator
 Un'app desktop molto semplice, utile per generare password sicure avendo la possibilita' di selezionarne la lunghezza, l'app è molto intuitiva e molto semplice con il minimo indispensabile!
